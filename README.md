@@ -35,7 +35,7 @@ This repository is designed as both a **study companion** and an **engineering r
 
 ### 1. Sorting Algorithms
 - [x] **Bubble Sort** ([Code](Programs/bubble_sort.py) | [Notes](Theory01.md))
-- [ ] **Selection Sort** *(Upcoming)*
+- [x] **Selection Sort** ([Code](Programs/selection_sort.py) | [Notes](Theory02.md))
 - [ ] **Insertion Sort** *(Upcoming)*
 - [ ] **Merge Sort** *(Upcoming)*
 - [ ] **Quick Sort** *(Upcoming)*
@@ -46,7 +46,7 @@ This repository is designed as both a **study companion** and an **engineering r
 
 ### 3. Complexity Analysis
 - [x] **Asymptotic Notation** ($\mathcal{O}$, $\Omega$, $\Theta$)
-- [x] **Iteration & Swap Calculation Formulas** ([Notes](Theory01.md))
+- [x] **Iteration & Swap Calculation Formulas** ([Notes (Bubble Sort)](Theory01.md) | [Notes (Selection Sort)](Theory02.md))
 
 ### 4. Linear Data Structures
 - [ ] **Arrays & Dynamic Arrays**
@@ -81,11 +81,13 @@ DSA_Using_Python/
 ├── .gitignore              # Ignores bytecode, caches, and environment configs
 ├── LICENSE                 # MIT Open-Source License
 ├── README.md               # Repository documentation and navigation guide
-├── Theory01.md             # Theoretical foundation, dry-runs & sorting notes
+├── Theory01.md             # Theoretical foundation, dry-runs & Bubble Sort notes
+├── Theory02.md             # Selection Sort theory, pass traces & complexity notes
 │
 └── Programs/               # Executable Python implementations
     ├── bubble_sort.py      # Bubble Sort (PEP 8 standard naming)
-    └── BubleSort.py        # Bubble Sort implementation
+    ├── BubleSort.py        # Bubble Sort implementation
+    └── selection_sort.py   # Selection Sort (PEP 8 standard naming)
 ```
 
 ---
@@ -105,10 +107,14 @@ cd DSA_Using_Python
 Each program contains an interactive demo mode:
 
 ```bash
+# Run Bubble Sort demo
 python3 Programs/bubble_sort.py
+
+# Run Selection Sort demo
+python3 Programs/selection_sort.py
 ```
 
-**Example Run:**
+**Example Run (Bubble Sort):**
 ```text
 ==================================================
                BUBBLE SORT DEMO
@@ -116,6 +122,16 @@ python3 Programs/bubble_sort.py
 Enter numbers separated by space (or press Enter for default demo): 64 34 25 12 22 11 90
 Original Array : [64, 34, 25, 12, 22, 11, 90]
 Sorted Array   : [11, 12, 22, 25, 34, 64, 90]
+```
+
+**Example Run (Selection Sort):**
+```text
+==================================================
+              SELECTION SORT DEMO
+==================================================
+Enter numbers separated by space (or press Enter for default demo): 10 5 8 2 1 3
+Original Array : [10, 5, 8, 2, 1, 3]
+Sorted Array   : [1, 2, 3, 5, 8, 10]
 ```
 
 ---
