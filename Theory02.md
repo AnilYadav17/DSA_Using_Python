@@ -229,3 +229,225 @@ n - 1
 0
 ```
 
+---
+
+# Practice Problem (Step-by-Step Dry Run)
+
+### Given Array
+
+```text
+1, 2, 3, 8, 7, 6, 5, 4
+```
+
+**Number of elements (`n`):** 8
+
+---
+
+## Pass-1
+
+**Minimum = 1** (at index 0)
+
+```text
+2 > min → min = 1
+3 > min → min = 1
+8 > min → min = 1
+7 > min → min = 1
+6 > min → min = 1
+5 > min → min = 1
+4 > min → min = 1
+```
+
+No swap is required.
+
+```text
+1, 2, 3, 8, 7, 6, 5, 4
+```
+
+---
+
+## Pass-2
+
+**Minimum = 2** (at index 1)
+
+```text
+3 > min → min = 2
+8 > min → min = 2
+7 > min → min = 2
+6 > min → min = 2
+5 > min → min = 2
+4 > min → min = 2
+```
+
+No swap is required.
+
+```text
+1, 2, 3, 8, 7, 6, 5, 4
+```
+
+---
+
+## Pass-3
+
+**Minimum = 3** (at index 2)
+
+```text
+8 > min → min = 3
+7 > min → min = 3
+6 > min → min = 3
+5 > min → min = 3
+4 > min → min = 3
+```
+
+No swap is required.
+
+```text
+1, 2, 3, 8, 7, 6, 5, 4
+```
+
+---
+
+## Pass-4
+
+**Minimum = 8** (at index 3)
+
+```text
+7 < 8 → min = 7
+6 < 7 → min = 6
+5 < 6 → min = 5
+4 < 5 → min = 4
+```
+
+Swap `8` and `4`.
+
+```text
+1, 2, 3, 4, 7, 6, 5, 8
+```
+
+---
+
+## Pass-5
+
+**Minimum = 7** (at index 4)
+
+```text
+6 < 7 → min = 6
+5 < 6 → min = 5
+8 > 5 → min = 5
+```
+
+Swap `7` and `5`.
+
+```text
+1, 2, 3, 4, 5, 6, 7, 8
+```
+
+---
+
+## Pass-6
+
+**Minimum = 6** (at index 5)
+
+```text
+7 > min → min = 6
+8 > min → min = 6
+```
+
+No swap is required.
+
+```text
+1, 2, 3, 4, 5, 6, 7, 8
+```
+
+---
+
+## Pass-7
+
+**Minimum = 7** (at index 6)
+
+```text
+8 > min → min = 7
+```
+
+No swap is required.
+
+```text
+1, 2, 3, 4, 5, 6, 7, 8
+```
+
+---
+
+# Comprehensive Analysis & Summary
+
+### Total Passes
+
+```text
+n - 1 = 8 - 1 = 7 passes
+```
+
+### Comparisons Per Pass
+
+```text
+Pass 1 → 7 comparisons
+Pass 2 → 6 comparisons
+Pass 3 → 5 comparisons
+Pass 4 → 4 comparisons
+Pass 5 → 3 comparisons
+Pass 6 → 2 comparisons
+Pass 7 → 1 comparison
+```
+
+Therefore:
+
+```text
+Total Comparisons
+= 7 + 6 + 5 + 4 + 3 + 2 + 1
+= 28
+```
+
+### Swaps
+
+```text
+Pass 4 → 1 swap (8 ↔ 4)
+Pass 5 → 1 swap (7 ↔ 5)
+```
+
+Therefore:
+
+```text
+Total Swaps = 2
+```
+
+### Final Summary
+
+```text
+Initial Array      : 1, 2, 3, 8, 7, 6, 5, 4
+Final Sorted Array : 1, 2, 3, 4, 5, 6, 7, 8
+
+Total Passes       : 7
+Total Comparisons  : 28
+Total Swaps        : 2
+```
+
+---
+
+# Points to Remember
+
+> **Passes**
+>
+> Minimum = `n - 1`
+>
+> Maximum = `n - 1`
+
+> **Comparisons**
+>
+> Minimum = `n(n - 1) / 2`
+>
+> Maximum = `n(n - 1) / 2`
+
+> **Swaps**
+>
+> Minimum = `0`
+>
+> Maximum = `n - 1`
+
+
