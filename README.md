@@ -36,7 +36,7 @@ This repository is designed as both a **study companion** and an **engineering r
 ### 1. Sorting Algorithms
 - [x] **Bubble Sort** ([Code](Programs/bubble_sort.py) | [Notes](BubbleSort.md))
 - [x] **Selection Sort** ([Code](Programs/selection_sort.py) | [Notes](SelectionSort.md))
-- [ ] **Insertion Sort** *(Upcoming)*
+- [x] **Insertion Sort** ([Code](Programs/insertion_sort.py) | [Notes](InsertionSort.md))
 - [ ] **Merge Sort** *(Upcoming)*
 - [ ] **Quick Sort** *(Upcoming)*
 
@@ -46,7 +46,7 @@ This repository is designed as both a **study companion** and an **engineering r
 
 ### 3. Complexity Analysis
 - [x] **Asymptotic Notation** ($\mathcal{O}$, $\Omega$, $\Theta$)
-- [x] **Iteration & Swap Calculation Formulas** ([Notes (Bubble Sort)](BubbleSort.md) | [Notes (Selection Sort)](SelectionSort.md))
+- [x] **Iteration & Swap Calculation Formulas** ([Notes (Bubble Sort)](BubbleSort.md) | [Notes (Selection Sort)](SelectionSort.md) | [Notes (Insertion Sort)](InsertionSort.md))
 
 ### 4. Linear Data Structures
 - [ ] **Arrays & Dynamic Arrays**
@@ -80,6 +80,7 @@ DSA_Using_Python/
 │
 ├── .gitignore              # Ignores bytecode, caches, and environment configs
 ├── BubbleSort.md           # Theoretical foundation, dry-runs & Bubble Sort notes
+├── InsertionSort.md        # Insertion Sort theory, pass traces & complexity notes
 ├── LICENSE                 # MIT Open-Source License
 ├── README.md               # Repository documentation and navigation guide
 ├── SelectionSort.md        # Selection Sort theory, pass traces & complexity notes
@@ -87,6 +88,8 @@ DSA_Using_Python/
 └── Programs/               # Executable Python implementations
     ├── bubble_sort.py      # Bubble Sort (PEP 8 standard naming)
     ├── BubleSort.py        # Bubble Sort implementation
+    ├── insertion_sort.py   # Insertion Sort (PEP 8 standard naming)
+    ├── InsertionSort.py    # Insertion Sort implementation
     ├── selection_sort.py   # Selection Sort (PEP 8 standard naming)
     └── SelectionSort.py    # Selection Sort implementation
 ```
@@ -113,6 +116,9 @@ python3 Programs/bubble_sort.py
 
 # Run Selection Sort demo
 python3 Programs/selection_sort.py
+
+# Run Insertion Sort demo
+python3 Programs/insertion_sort.py
 ```
 
 **Example Run (Bubble Sort):**
@@ -133,6 +139,16 @@ Sorted Array   : [11, 12, 22, 25, 34, 64, 90]
 Enter numbers separated by space (or press Enter for default demo): 10 5 8 2 1 3
 Original Array : [10, 5, 8, 2, 1, 3]
 Sorted Array   : [1, 2, 3, 5, 8, 10]
+```
+
+**Example Run (Insertion Sort):**
+```text
+==================================================
+              INSERTION SORT DEMO
+==================================================
+Enter numbers separated by space (or press Enter for default demo): 12 11 13 5 6
+Original Array : [12, 11, 13, 5, 6]
+Sorted Array   : [5, 6, 11, 12, 13]
 ```
 
 ---
