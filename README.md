@@ -34,8 +34,8 @@ This repository is designed as both a **study companion** and an **engineering r
 ## 🗺️ Curriculum & Roadmap
 
 ### 1. Sorting Algorithms
-- [x] **Bubble Sort** ([Code](Programs/bubble_sort.py) | [Notes](Theory01.md))
-- [x] **Selection Sort** ([Code](Programs/selection_sort.py) | [Notes](Theory02.md))
+- [x] **Bubble Sort** ([Code](Programs/bubble_sort.py) | [Notes](BubbleSort.md))
+- [x] **Selection Sort** ([Code](Programs/selection_sort.py) | [Notes](SelectionSort.md))
 - [ ] **Insertion Sort** *(Upcoming)*
 - [ ] **Merge Sort** *(Upcoming)*
 - [ ] **Quick Sort** *(Upcoming)*
@@ -46,7 +46,7 @@ This repository is designed as both a **study companion** and an **engineering r
 
 ### 3. Complexity Analysis
 - [x] **Asymptotic Notation** ($\mathcal{O}$, $\Omega$, $\Theta$)
-- [x] **Iteration & Swap Calculation Formulas** ([Notes (Bubble Sort)](Theory01.md) | [Notes (Selection Sort)](Theory02.md))
+- [x] **Iteration & Swap Calculation Formulas** ([Notes (Bubble Sort)](BubbleSort.md) | [Notes (Selection Sort)](SelectionSort.md))
 
 ### 4. Linear Data Structures
 - [ ] **Arrays & Dynamic Arrays**
@@ -79,15 +79,16 @@ This repository is designed as both a **study companion** and an **engineering r
 DSA_Using_Python/
 │
 ├── .gitignore              # Ignores bytecode, caches, and environment configs
+├── BubbleSort.md           # Theoretical foundation, dry-runs & Bubble Sort notes
 ├── LICENSE                 # MIT Open-Source License
 ├── README.md               # Repository documentation and navigation guide
-├── Theory01.md             # Theoretical foundation, dry-runs & Bubble Sort notes
-├── Theory02.md             # Selection Sort theory, pass traces & complexity notes
+├── SelectionSort.md        # Selection Sort theory, pass traces & complexity notes
 │
 └── Programs/               # Executable Python implementations
     ├── bubble_sort.py      # Bubble Sort (PEP 8 standard naming)
     ├── BubleSort.py        # Bubble Sort implementation
-    └── selection_sort.py   # Selection Sort (PEP 8 standard naming)
+    ├── selection_sort.py   # Selection Sort (PEP 8 standard naming)
+    └── SelectionSort.py    # Selection Sort implementation
 ```
 
 ---
