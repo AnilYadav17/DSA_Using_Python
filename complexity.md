@@ -392,3 +392,56 @@ Time Complexity: O(n⁵)
 
 ---
 
+## Example 9: Three Separate Loops with Different Bounds
+
+```text
+for i = 1 to n:
+    print("hi")
+
+for i = 1 to n²:
+    print("hi")
+
+for i = 1 to n³:
+    print("hi")
+```
+
+### Analysis
+
+First loop:
+
+```text
+O(n)
+```
+
+Second loop:
+
+```text
+O(n²)
+```
+
+Third loop:
+
+```text
+O(n³)
+```
+
+Total complexity:
+
+```text
+O(n) + O(n²) + O(n³)
+```
+
+The dominant term is `n³`.
+
+Therefore:
+
+```text
+Time Complexity: O(n³)
+```
+
+This is called **cubic time complexity**.
+
+**Rule:** When adding different growth rates, keep the dominant term.
+
+---
+
