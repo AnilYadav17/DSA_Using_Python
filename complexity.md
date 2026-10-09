@@ -582,3 +582,71 @@ Space Complexity: O(n²)
 
 ---
 
+# Common Time Complexity Classes
+
+The following list is ordered approximately from slower-growing to faster-growing complexity.
+
+| Complexity   | Name         | Example                                                            |
+| ------------ | ------------ | ------------------------------------------------------------------ |
+| `O(1)`       | Constant     | Accessing an element by index                                      |
+| `O(log n)`   | Logarithmic  | Binary Search                                                      |
+| `O(√n)`      | Square root  | Checking divisors up to `√n`                                       |
+| `O(n)`       | Linear       | Traversing an array                                                |
+| `O(n log n)` | Linearithmic | Merge Sort                                                         |
+| `O(n²)`      | Quadratic    | Two full nested loops                                              |
+| `O(n³)`      | Cubic        | Three full nested loops                                            |
+| `O(2ⁿ)`      | Exponential  | A typical exhaustive subset search                                 |
+| `O(n!)`      | Factorial    | Generating all permutations                                        |
+| `O(nⁿ)`      | Exponential  | Enumerating all length-`n` sequences with `n` choices per position |
+
+These are common growth classes. The exact complexity of an algorithm depends on its implementation and the operations it performs.
+
+---
+
+# Final Summary
+
+## 1. Time and Space Complexity
+
+| Concept          | Meaning                                    |
+| ---------------- | ------------------------------------------ |
+| Time Complexity  | Growth in computational work               |
+| Space Complexity | Growth in memory requirements              |
+| Auxiliary Space  | Extra memory used, excluding input storage |
+
+## 2. Asymptotic Notations
+
+| Notation  | Meaning                    |
+| --------- | -------------------------- |
+| `O(g(n))` | Asymptotic upper bound     |
+| `Ω(g(n))` | Asymptotic lower bound     |
+| `Θ(g(n))` | Asymptotically tight bound |
+
+## 3. Common Complexity Classes
+
+```text
+O(1)        → Constant
+O(log n)    → Logarithmic
+O(√n)       → Square root
+O(n)        → Linear
+O(n log n)  → Linearithmic
+O(n²)       → Quadratic
+O(n³)       → Cubic
+O(2ⁿ)       → Exponential
+O(n!)       → Factorial
+O(nⁿ)       → Exponential
+```
+
+## 4. Rules to Remember
+
+1. **Constant loop bounds:** A fixed number of iterations gives `O(1)` time.
+2. **Single input-dependent loop:** Usually `O(n)`.
+3. **Two full nested loops:** Usually `O(n²)`.
+4. **Three full nested loops:** Usually `O(n³)`.
+5. **Doubling or halving the problem size:** Often `O(log n)`.
+6. **Sequential loops:** Add their complexities, then retain the dominant term.
+7. **Nested loops:** Analyze how many times the innermost operation executes.
+8. **Break statements:** Check when the loop actually terminates; a `break` can change the complexity.
+9. **Ignore constant factors:** `O(2n)` simplifies to `O(n)`.
+10. **Retain the dominant term:** `O(n² + n + 1)` simplifies to `O(n²)`.
+11. **Memory usage:** An `n × n` collection of stored elements requires `O(n²)` space.
+12. **Analyze the actual code:** Similar-looking loops can have different complexities because their bounds, increments, and termination conditions differ.
