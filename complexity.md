@@ -445,3 +445,47 @@ This is called **cubic time complexity**.
 
 ---
 
+## Example 10: Nested Loop with an Increasing Step
+
+```text
+for i = 1 to n:
+    for j = 1 to n, increment j by i:
+        print("hii")
+```
+
+### Analysis
+
+For each value of `i`, the inner loop increases `j` by `i`.
+
+Therefore, the inner loop executes approximately:
+
+```text
+n/i
+```
+
+times.
+
+Across all outer-loop iterations, the total number of operations is proportional to:
+
+```text
+n/1 + n/2 + n/3 + ... + n/n
+```
+
+Factor out `n`:
+
+```text
+n(1 + 1/2 + 1/3 + ... + 1/n)
+```
+
+The harmonic sum grows proportionally to `log n`.
+
+Therefore:
+
+```text
+Time Complexity: O(n log n)
+```
+
+This is called **linearithmic time complexity**.
+
+---
+
