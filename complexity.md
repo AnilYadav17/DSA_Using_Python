@@ -66,3 +66,53 @@ It means the growth is bounded both above and below by the same asymptotic order
 
 ---
 
+# Complexity Analysis Examples
+
+## Example 1: Constant Complexity — `O(1)`
+
+```python
+for i in range(1, 101):
+    print("hii")
+```
+
+### Analysis
+
+The loop always executes 100 times, regardless of the input size.
+
+There is no input variable `n` controlling the number of iterations.
+
+Therefore:
+
+```text
+Time Complexity: O(1)
+```
+
+This is called **constant time complexity** because the amount of computational work does not grow with the input size.
+
+---
+
+## Example 2: Linear Complexity — `O(n)`
+
+```python
+for i in range(1, n + 1):
+    print("hii")
+```
+
+### Analysis
+
+The loop executes `n` times.
+
+If `n = 5`, the loop executes 5 times.
+
+If `n = 100`, the loop executes 100 times.
+
+Therefore:
+
+```text
+Time Complexity: O(n)
+```
+
+This is called **linear time complexity**.
+
+---
+
