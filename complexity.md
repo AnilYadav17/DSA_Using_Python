@@ -274,3 +274,60 @@ Time Complexity: O(n)
 
 ---
 
+## Example 7: Logarithmic Complexity — `O(log n)`
+
+```python
+i = 1
+
+while i < n:
+    print("hii")
+    i *= 2
+```
+
+### Analysis
+
+The value of `i` doubles during every iteration.
+
+For example, when `n = 16`:
+
+```text
+i = 1
+i = 2
+i = 4
+i = 8
+```
+
+The next value would be `16`, at which point the condition `i < n` becomes false.
+
+The values follow this pattern:
+
+```text
+2⁰, 2¹, 2², 2³, ..., 2ᵏ
+```
+
+After `k` iterations, the value is proportional to `2ᵏ`.
+
+When it reaches `n`:
+
+```text
+2ᵏ = n
+```
+
+Taking the logarithm:
+
+```text
+k = log₂(n)
+```
+
+Therefore:
+
+```text
+Time Complexity: O(log n)
+```
+
+This is called **logarithmic time complexity**.
+
+The base of the logarithm is omitted in Big-O notation because changing the base only introduces a constant factor.
+
+---
+
