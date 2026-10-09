@@ -116,3 +116,74 @@ This is called **linear time complexity**.
 
 ---
 
+## Example 3: Quadratic Complexity — `O(n²)`
+
+```python
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        print("hii")
+```
+
+### Analysis
+
+The outer loop executes `n` times.
+
+For every iteration of the outer loop, the inner loop executes `n` times.
+
+Total operations:
+
+```text
+n × n = n²
+```
+
+Therefore:
+
+```text
+Time Complexity: O(n²)
+```
+
+This is called **quadratic time complexity**.
+
+---
+
+## Example 4: Square Root Complexity — `O(√n)`
+
+Consider the following code:
+
+```python
+for i in range(1, n + 1):
+    if i**2 <= n:
+        print("hii")
+    else:
+        print("bye")
+        break
+```
+
+### Analysis
+
+The condition is:
+
+```text
+i² <= n
+```
+
+Taking the square root:
+
+```text
+i <= √n
+```
+
+The loop continues until `i` exceeds `√n`. After that, the `break` statement terminates the loop.
+
+The number of iterations is proportional to `√n`.
+
+Therefore:
+
+```text
+Time Complexity: O(√n)
+```
+
+**Correction:** Your original example used `range(100)`, which has a fixed limit. That exact code has `O(1)` time complexity, not `O(√n)`. The version above uses `range(1, n + 1)` to demonstrate square root complexity.
+
+---
+
