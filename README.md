@@ -45,8 +45,9 @@ This repository is designed as both a **study companion** and an **engineering r
 - [ ] **Binary Search** *(Upcoming)*
 
 ### 3. Complexity Analysis
-- [x] **Asymptotic Notation** ($\mathcal{O}$, $\Omega$, $\Theta$)
+- [x] **Asymptotic Notation** ($\mathcal{O}$, $\Omega$, $\Theta$) ([Notes](complexity.md))
 - [x] **Iteration & Swap Calculation Formulas** ([Notes (Bubble Sort)](BubbleSort.md) | [Notes (Selection Sort)](SelectionSort.md) | [Notes (Insertion Sort)](InsertionSort.md))
+- [x] **Time & Space Complexity Proofs & Common Patterns** ([Notes](complexity.md))
 
 ### 4. Linear Data Structures
 - [ ] **Arrays & Dynamic Arrays**
@@ -80,6 +81,7 @@ DSA_Using_Python/
 │
 ├── .gitignore              # Ignores bytecode, caches, and environment configs
 ├── BubbleSort.md           # Theoretical foundation, dry-runs & Bubble Sort notes
+├── complexity.md           # Comprehensive Time & Space Complexity analysis guide
 ├── InsertionSort.md        # Insertion Sort theory, pass traces & complexity notes
 ├── LICENSE                 # MIT Open-Source License
 ├── README.md               # Repository documentation and navigation guide
