@@ -26,3 +26,43 @@ It includes memory used for variables, data structures, and other operations. De
 
 ---
 
+# Asymptotic Notations
+
+Asymptotic notations are mathematical notations used to describe the growth rate of an algorithm as the input size `n` becomes very large.
+
+There are three major asymptotic notations:
+
+1. Big-Omega `Ω`
+2. Big-Theta `Θ`
+3. Big-O `O`
+
+## 1. Big-O — `O`
+
+Big-O describes an asymptotic **upper bound** on the growth of an algorithm's resource usage.
+
+It is commonly used when discussing worst-case time complexity.
+
+## 2. Big-Omega — `Ω`
+
+Big-Omega describes an asymptotic **lower bound** on the growth of an algorithm's resource usage.
+
+It is commonly used when discussing best-case time complexity.
+
+## 3. Big-Theta — `Θ`
+
+Big-Theta describes a **tight asymptotic bound** on the growth of an algorithm's resource usage.
+
+It means the growth is bounded both above and below by the same asymptotic order.
+
+### Summary
+
+| Notation  | Meaning     | Common Association            |
+| --------- | ----------- | ----------------------------- |
+| `O(g(n))` | Upper bound | Worst-case analysis           |
+| `Ω(g(n))` | Lower bound | Best-case analysis            |
+| `Θ(g(n))` | Tight bound | Exact asymptotic growth order |
+
+**Important:** These notations describe mathematical bounds. Big-O does not inherently mean worst case, Big-Omega does not inherently mean best case, and Big-Theta does not inherently mean average case. The actual case depends on the algorithm and the analysis being performed.
+
+---
+
