@@ -489,3 +489,96 @@ This is called **linearithmic time complexity**.
 
 ---
 
+# Complexity of Creating Lists
+
+## Example 1: Creating a Single List
+
+```python
+def create_list(n):
+    numbers = []
+
+    for i in range(n):
+        numbers.append(i)
+
+    return numbers
+```
+
+### Time Complexity
+
+The loop executes `n` times.
+
+Appending to a Python list takes amortized constant time.
+
+Therefore:
+
+```text
+Time Complexity: O(n)
+```
+
+### Space Complexity
+
+The list stores `n` elements.
+
+Therefore:
+
+```text
+Space Complexity: O(n)
+```
+
+---
+
+## Example 2: Creating a Nested List
+
+```python
+def create_nested_list(n):
+    numbers = []
+
+    for i in range(n):
+        row = []
+
+        for j in range(n):
+            row.append(j)
+
+        numbers.append(row)
+
+    return numbers
+```
+
+### Time Complexity
+
+The outer loop executes `n` times.
+
+For each outer-loop iteration, the inner loop executes `n` times.
+
+Total operations:
+
+```text
+n × n = n²
+```
+
+Therefore:
+
+```text
+Time Complexity: O(n²)
+```
+
+### Space Complexity
+
+There are `n` rows, and each row contains `n` elements.
+
+Total elements:
+
+```text
+n × n = n²
+```
+
+Therefore:
+
+```text
+Space Complexity: O(n²)
+```
+
+**Important:** Creating a nested list does not automatically mean `O(n²)`. The complexity depends on how many elements are created. A list containing `n` empty lists requires only `O(n)` space, while an `n × n` list requires `O(n²)` space.
+
+---
+
