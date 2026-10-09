@@ -187,3 +187,90 @@ Time Complexity: O(√n)
 
 ---
 
+## Example 5: Nested Loop with a Break Statement
+
+```python
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        if j <= i:
+            for k in range(101):
+                print("hii")
+            break
+```
+
+### Analysis
+
+The outer loop executes `n` times.
+
+For every outer-loop iteration, `j` starts at `1`.
+
+Since `i >= 1`, the condition `j <= i` is true on the first iteration of the inner loop.
+
+The `k` loop therefore executes 101 times, and then `break` terminates the `j` loop.
+
+Consequently, each outer-loop iteration performs a constant amount of work.
+
+Total work:
+
+```text
+101 × n
+```
+
+Ignoring constant factors:
+
+```text
+Time Complexity: O(n)
+```
+
+**Important:** The `break` statement changes the complexity here. The inner `j` loop does not execute `n` times because it terminates during its first iteration.
+
+---
+
+## Example 6: Two Separate Linear Loops
+
+```python
+i = 1
+
+while i <= n:
+    print("hii")
+    i += 1
+
+j = 1
+
+while j <= n:
+    print("bye")
+    j += 1
+```
+
+### Analysis
+
+First loop:
+
+```text
+O(n)
+```
+
+Second loop:
+
+```text
+O(n)
+```
+
+Total complexity:
+
+```text
+O(n) + O(n)
+= O(2n)
+= O(n)
+```
+
+Therefore:
+
+```text
+Time Complexity: O(n)
+```
+
+**Rule:** When adding the complexities of sequential operations, discard constant factors and retain the dominant growth rate.
+
+---
+
