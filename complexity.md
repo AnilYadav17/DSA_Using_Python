@@ -331,3 +331,64 @@ The base of the logarithm is omitted in Big-O notation because changing the base
 
 ---
 
+## Example 8: Three Nested Loops
+
+Consider the following pseudocode:
+
+```text
+for i = 1 to n:
+    for j = 1 to i²:
+        for k = 1 to j/2:
+            print("xcvbn")
+```
+
+### Analysis
+
+The outer loop executes `n` times.
+
+For a fixed value of `i`, the `j` loop executes up to `i²` times.
+
+For each `j`, the `k` loop executes approximately `j/2` times.
+
+Since constant factors are ignored, the number of operations for a fixed `i` is proportional to:
+
+```text
+1 + 2 + 3 + ... + i²
+```
+
+Using the summation formula:
+
+```text
+1 + 2 + 3 + ... + m = m(m + 1)/2
+```
+
+Substitute `m = i²`:
+
+```text
+i²(i² + 1)/2
+```
+
+The dominant term is proportional to:
+
+```text
+i⁴
+```
+
+Now sum across all values of `i`:
+
+```text
+1⁴ + 2⁴ + 3⁴ + ... + n⁴
+```
+
+The sum of fourth powers grows proportionally to `n⁵`.
+
+Therefore:
+
+```text
+Time Complexity: O(n⁵)
+```
+
+**Correction:** The original `O(n⁴)` answer does not account for all three loop bounds. Because `j` runs up to `i²` and `k` runs proportionally to `j`, the correct result is `O(n⁵)`.
+
+---
+
